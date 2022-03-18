@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+time=$1;
+c=0;
+
+while [ $c -lt $time ]
+do
+  clear;
+  echo "Restam: $((time - c)) segundos...";
+  sleep 1s;
+  c=$((c+1));
+done
+echo -e "\e[1;31mACABOU O DESCANSO.\nBORA TREINAR. VIRA MONSTRO!\e[0m"
+paplay '/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga'
